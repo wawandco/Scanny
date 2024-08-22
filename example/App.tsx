@@ -1,11 +1,30 @@
-import { StyleSheet, Text, View } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+import { useEffect } from 'react';
+
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 import * as Scanny from 'scanny';
 
 export default function App() {
+  useEffect(() => {
+    requestCameraPermission()
+  });
+
+  const requestCameraPermission = async () => {
+    await ImagePicker.requestCameraPermissionsAsync()
+  }
+
+  function onPress() {
+    Scanny.openCamera()
+  }
+
   return (
     <View style={styles.container}>
-      <Text>{Scanny.hello()}</Text>
+      <Text>{"Hello"}</Text>
+      <Button
+        title="Press me."
+        onPress={onPress}
+      />
     </View>
   );
 }
