@@ -1,7 +1,7 @@
 {
-  "name": "scanny",
+  "name": "@wawandco/scanny",
   "version": "0.1.0",
-  "description": "scan documents",
+  "description": "An Expo package used to scan documents",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
@@ -21,14 +21,16 @@
     "scanny",
     "Scanny"
   ],
-  "repository": "https://github.com/wawandco/Scanny",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wawandco/Scanny.git"
+  },
   "bugs": {
     "url": "https://github.com/wawandco/Scanny/issues"
   },
   "author": "Wawandco <epolo@wawand.co> (https://github.com/wawandco/Scanny)",
   "license": "MIT",
   "homepage": "https://github.com/wawandco/Scanny#readme",
-  "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.5.2",
@@ -38,5 +40,8 @@
     "expo": "*",
     "react": "*",
     "react-native": "*"
+  },
+  "directories": {
+    "example": "example"
   }
 }
